@@ -336,8 +336,12 @@ if menu_id == "Home":
         for art in articles:
             #get image
             image=str(art.find('div', {'class': 'img-sized'}))
-            image= re.findall(r'\bsrc=".+\b"', image)[0].replace('src="', "").replace('"',"")
-            images.append(image)
+            if image_tag:
+                image_src = image_tag.find('img').get('src')
+                images.append(image_src)
+            else:
+                images.append(None)
+            
             #get title
             title = art.find('a',{'class': 'article__title'}).get_text()
             titles.append(title)
