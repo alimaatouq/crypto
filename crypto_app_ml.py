@@ -350,26 +350,26 @@ if menu_id == "Home":
         return news
     #news= get_news()
     #create the display of the scraped articles in the app
-    for i in range(0,len(news)):
-        empt,image, block,empt= st.columns([0.25,0.38,1.4,0.25])
-        with image:
-            st.image(news.image[i])
-        with block:
-            card=f"""
-                    <html>
-                    <body>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">{news.title[i]}</h5>
-                                <a href="{news.link[i]}" class="card-link">Read more</a>
-                            </div>
-                        </div>
-                    </body>
-                    </html>"""
-            st.write("")
-            st.write("")
-            st.write("")
-            st.markdown(card, unsafe_allow_html = True)
+    #for i in range(0,len(news)):
+        #empt,image, block,empt= st.columns([0.25,0.38,1.4,0.25])
+        #with image:
+            #st.image(news.image[i])
+        #with block:
+            #card=f"""
+                    #<html>
+                    #<body>
+                    #    <div class="card">
+                   #         <div class="card-body">
+                  #              <h5 class="card-title">{news.title[i]}</h5>
+                 #               <a href="{news.link[i]}" class="card-link">Read more</a>
+                #            </div>
+               #         </div>
+              #      </body>
+             #       </html>"""
+            #st.write("")
+            #st.write("")
+            #st.write("")
+            #st.markdown(card, unsafe_allow_html = True)
 
 if menu_id == "Meta Data":
     st.header("Meta Data of 8,000+ Cryptos")
