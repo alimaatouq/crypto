@@ -17,6 +17,6 @@ plotly
 hydralit_components
 yfinance
 autots
-sklearn
+scikit-learn
 statsmodels
 IPython
