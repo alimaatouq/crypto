@@ -348,7 +348,7 @@ if menu_id == "Home":
             links.append(article_link)
         news= pd.DataFrame({"image": images,"title":titles,"link":links})
         return news
-    news= get_news()
+    #news= get_news()
     #create the display of the scraped articles in the app
     for i in range(0,len(news)):
         empt,image, block,empt= st.columns([0.25,0.38,1.4,0.25])
